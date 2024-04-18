@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hair make 桜 official website | ABOUT</title>
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/slick.css">
+    <link rel="stylesheet" type="text/css" href="style/slick-theme.css">
+</head>
+
+<body>
+    <div class="WRAPPER" id="">
+        <div class="">
+            <header>
+                <div class="HEADER_INNER DF JCB AIC">
+                    <div class="humburger">
+                        <a href="#" class="menu-trigger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <h1><a href="index.html"><img src="media/logo.png" class="img-responsive" alt="hair make 桜"></a></h1>
+                    <nav>
+                        <ul class="MENU DF">
+                            <li><a href="index.html">HOME</a>
+                            </li>
+                            <li><a href="about.html">ABOUT</a>
+                            </li>
+                            <li><a href="menu.html">MENU</a>
+                            </li>
+                            <li>
+                                <a href="http://www.bja1963.com/product/" target="blank">PRODUCTS</a>
+                            </li>
+                            <li><a href="staff.html">STAFF</a>
+                            </li>
+                            <li><a href="bridal.html">BRIDAL</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+           <main>
+                <div class="MAINBG BG_BRIDAL DF JCC AIC">
+                    <h2><img src="media/h2_bridal.png" class="img-responsive" alt="ABOUT"></h2>
+                </div>
+            </main>
+            <footer>
+                <div class="FOOTER_INNER">
+                    <p>©All Right Reserved hair make 桜</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="script/barba.min.js"></script>
+    <script type="text/javascript" src="script/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="script/slick.min.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+    <script type="text/javascript">
+    Barba.Dispatcher.on('newPageReady', function() {
+
+        //SLICKJS
+        $(function() {
+            $('.slider').slick({
+                infinite: true,
+                autoplay: true,
+                fade: true,
+                autoplaySpeed: 4000
+            });
+        });
+
+        //SP NAV
+        $(function() {
+            var trigger = $('.menu-trigger');
+            var nav = $("nav");
+
+            trigger.on("click", function(e) {
+                event.preventDefault();
+                $(this).toggleClass('active');
+                nav.toggleClass('active');
+            });
+        });
+    });
+
+    Barba.Pjax.start();
+    </script>
+</body>
+
+</html>
