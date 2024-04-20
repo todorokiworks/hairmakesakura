@@ -1,11 +1,11 @@
-$(function(){
-    $(window).on('load',function(){
+$(function () {
+    $(window).on('load', function () {
         $('body').addClass('show');
     });
 });
 
 //SLICKJS
-$(function() {
+$(function () {
     $('.slider').slick({
         infinite: true,
         autoplay: true,
@@ -15,32 +15,32 @@ $(function() {
 });
 
 //SP NAV
-$(function() {
+$(function () {
     var trigger = $('.menu-trigger');
     var nav = $("nav");
 
-    trigger.on("click", function(e) {
+    trigger.on("click", function (e) {
         event.preventDefault();
         $(this).toggleClass('active');
         nav.toggleClass('active');
     });
 });
 
-$(function() {
-    $('a.hover img').hover(function() {
+$(function () {
+    $('a.hover img').hover(function () {
         $(this).attr('src', $(this).attr('src').replace('_off', '_onn'));
-    }, function() {
+    }, function () {
         if (!$(this).hasClass('currentPage')) {
             $(this).attr('src', $(this).attr('src').replace('_onn', '_off'));
         }
     });
 });
 
- Tu.tScroll({
-      't-element': '.fadeUp'
-    });
+Tu.tScroll({
+    't-element': '.fadeUp'
+});
 
-$(function() {
+$(function () {
     $('#MODAL1').animatedModal({
         modalTarget: 'staff1',
         animatedIn: 'zoomIn', //表示する時のアニメーション
@@ -71,9 +71,17 @@ $(function() {
     });
 });
 
+/*const mainPt = () => {
+    const Hheight = document.getElementById('header').clientHeight;
+    const main = document.getElementById('main');
+
+    main.style.paddingTop = Hheight + 'px';
+}
+mainPt();*/
+
 
 var FadeTransition = Barba.BaseTransition.extend({
-    start: function() {
+    start: function () {
         /**
          * This function is automatically called as soon the Transition starts
          * this.newContainerLoading is a Promise for the loading of the new container
@@ -86,7 +94,7 @@ var FadeTransition = Barba.BaseTransition.extend({
             .then(this.fadeIn.bind(this));
     },
 
-    fadeOut: function() {
+    fadeOut: function () {
         /**
          * this.oldContainer is the HTMLElement of the old Container
          */
@@ -94,7 +102,7 @@ var FadeTransition = Barba.BaseTransition.extend({
         return $(this.oldContainer).animate({ opacity: 0 }).promise();
     },
 
-    fadeIn: function() {
+    fadeIn: function () {
         /**
          * this.newContainer is the HTMLElement of the new Container
          * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
@@ -111,7 +119,7 @@ var FadeTransition = Barba.BaseTransition.extend({
             opacity: 0
         });
 
-        $el.animate({ opacity: 1 }, 400, function() {
+        $el.animate({ opacity: 1 }, 400, function () {
             /**
              * Do not forget to call .done() as soon your transition is finished!
              * .done() will automatically remove from the DOM the old Container
@@ -126,7 +134,7 @@ var FadeTransition = Barba.BaseTransition.extend({
  * Next step, you have to tell Barba to use the new Transition
  */
 
-Barba.Pjax.getTransition = function() {
+Barba.Pjax.getTransition = function () {
     /**
      * Here you can use your own logic!
      * For example you can use different Transition based on the current page or link...
