@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>都城の弱酸性美容法専門店 桜ヘアメイク | CEREMONY</title>
+    <link rel="icon" href="media/favicon.ico" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/slick.css">
+    <link rel="stylesheet" type="text/css" href="style/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="WRAPPER" id="">
+        <div class="">
+            <header id="header">
+                <div class="HEADER_INNER DF JCB AIC">
+                    <div class="humburger">
+                        <a href="#" class="menu-trigger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <h1><a href="index.html"><img src="media/logo.png" class="img-responsive" alt="hair make 桜"></a>
+                    </h1>
+                    <nav>
+                        <ul class="MENU DF">
+                            <li><a href="index.html">HOME</a>
+                            </li>
+                            <li><a href="about.html">ABOUT</a>
+                            </li>
+                            <li><a href="menu.html">MENU</a>
+                            </li>
+                            <li>
+                                <a href="http://www.bja1963.com/product/" target="blank">PRODUCTS</a>
+                            </li>
+                            <li><a href="staff.html">STAFF</a>
+                            </li>
+                            <li><a href="bridal.html">BRIDAL</a>
+                            </li>
+                            <li><a href="ceremony.html">CEREMONY</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main id="main">
+                <div class="MAINBG BG_BRIDAL DF JCC AIC">
+                    <h2><img src="media/h2_ceremony.png" class="img-responsive" alt="ABOUT"></h2>
+                </div>
+                <div class="MENU_TEXT">
+                    <p>七五三や 七草祝い 成人式<br><br>
+
+                        大切な記念日のヘアメイク、着付けもいたしております</p>
+                </div>
+                <div class="SLIDER_WRAPPER_CEREMONY">
+                    <ul class="slider_ceremony">
+                        <li class="slider_ceremony-item"><img src="/media/ceremony_1.jpg" alt=""></li>
+                        <li class="slider_ceremony-item"><img src="/media/ceremony_2.jpg" alt=""></li>
+                        <li class="slider_ceremony-item"><img src="/media/ceremony_3.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="SLIDER_THUMBNAIL_WRAPPER_CEREMONY">
+                    <ul class="thumbnail_ceremony">
+                        <li class="slider_ceremony-item"><img src="/media/ceremony_1.jpg" alt=""></li>
+                        <li class="slider_ceremony-item"><img src="/media/ceremony_2.jpg" alt=""></li>
+                        <li class="slider_ceremony-item"><img src="/media/ceremony_3.jpg" alt=""></li>
+
+                    </ul>
+                </div>
+            </main>
+            <footer id="footer">
+                <div class="FOOTER_INNER">
+                    <p>©All Right Reserved 桜ヘアメイク</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="script/barba.min.js"></script>
+    <script type="text/javascript" src="script/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="script/slick.min.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+    <script type="text/javascript">
+        Barba.Dispatcher.on('newPageReady', function () {
+
+            //SLICKJS
+            $(function () {
+                $('.slider').slick({
+                    infinite: true,
+                    autoplay: true,
+                    fade: true,
+                    autoplaySpeed: 4000
+                });
+            });
+
+            //SP NAV
+            $(function () {
+                var trigger = $('.menu-trigger');
+                var nav = $("nav");
+
+                trigger.on("click", function (e) {
+                    event.preventDefault();
+                    $(this).toggleClass('active');
+                    nav.toggleClass('active');
+                });
+            });
+        });
+
+        Barba.Pjax.start();
+    </script>
+</body>
+
+</html>

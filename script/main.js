@@ -12,7 +12,45 @@ $(function () {
         fade: true,
         autoplaySpeed: 4000
     });
+
+    $('.slider_bridal').slick({
+        autoplay: true,
+        arrows: false,
+        fade: true,
+        asNavFor: ".thumbnail",
+    });
+
+    $('.thumbnail').slick({
+        slidesToShow: 5, // サムネイルの表示数
+        asNavFor: ".slider_bridal", // メイン画像と同期
+        focusOnSelect: true, // サムネイルクリックを有効化
+    });
+
+
+    $('.slider_ceremony').slick({
+        autoplay: true,
+        arrows: false,
+        fade: true,
+        asNavFor: ".thumbnail_ceremony",
+    });
+
+    $('.thumbnail_ceremony').slick({
+        slidesToShow: 3, // サムネイルの表示数
+        asNavFor: ".slider_ceremony", // メイン画像と同期
+        focusOnSelect: true, // サムネイルクリックを有効化
+    });
+
+
+
+    $('.slider_about').slick({
+        infinite: true,
+        autoplay: true,
+        fade: true,
+        autoplaySpeed: 2000
+    });
 });
+
+
 
 //SP NAV
 $(function () {

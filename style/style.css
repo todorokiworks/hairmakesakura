@@ -275,7 +275,7 @@ header {
   }
 }
 .HEADER_INNER nav {
-  width: 600px;
+  width: 680px;
   padding: 10px 0px;
   background: #fff;
   border-radius: 50px;
@@ -412,9 +412,21 @@ main {
   padding: 10px;
 }
 
+.slick-slide .video {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 980px) {
   .slick-slide .SLIDE-IMG p {
     font-size: 30px;
+  }
+  .slick-slide:has(.video) .video {
+    display: none;
+  }
+  .slick-slide:has(.video) .SLIDE-IMG {
+    background: url("/media/slide2.png") center center/cover no-repeat;
   }
 }
 @media only screen and (max-width: 980px) {
@@ -456,6 +468,46 @@ main {
   background-image: url("../media/bg4.png");
 }
 
+.ABOUT_INTRO {
+  padding-bottom: 40px !important;
+}
+.ABOUT_INTRO h3 {
+  color: #D562A2;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 24px;
+  position: relative;
+}
+.ABOUT_INTRO h3::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  border-radius: 25px;
+  background-color: #D562A2;
+}
+.ABOUT_INTRO .ABOUT_INTRO_TXT {
+  text-align: center;
+}
+
+.u-desktop {
+  display: block;
+}
+
+@media only screen and (max-width: 980px) {
+  .ABOUT_INTRO h3 {
+    font-size: 20px;
+  }
+  .ABOUT_INTRO .ABOUT_INTRO_TXT {
+    text-align: left;
+  }
+  .u-desktop {
+    display: none;
+  }
+}
 .ABOUT_INFO {
   width: 1080px;
   margin: 0 auto;
@@ -517,10 +569,24 @@ main {
 }
 
 .SHOPIMAGE {
-  max-width: 1080px;
+  max-width: 660px;
   margin: 0 auto 40px;
 }
+.SHOPIMAGE ul {
+  width: 100%;
+}
+.SHOPIMAGE ul li img {
+  width: 100%;
+}
+.SHOPIMAGE ul li video {
+  width: 100%;
+}
 
+@media only screen and (max-width: 980px) {
+  .SHOPIMAGE {
+    padding: 0 30px;
+  }
+}
 .SHOPIMAGE .GAIKAN {
   width: 50%;
 }
@@ -698,6 +764,85 @@ main {
   font-size: 20px;
 }
 
+/* -------------------------------- 
+
+BRIDAL
+
+-------------------------------- */
+.SLIDER_WRAPPER_BRIDAL {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.SLIDER_THUMBNAIL_WRAPPER_BRIDAL {
+  width: 980px;
+  margin: 0 auto 80px;
+}
+
+.SLIDER_THUMBNAIL_WRAPPER_BRIDAL ul li img {
+  width: 100%;
+}
+
+.slider_bridal {
+  width: 980px;
+  display: flex;
+  justify-content: center;
+}
+.slider_bridal .slider_bridal-item {
+  max-width: 100%;
+}
+.slider_bridal .slider_bridal-item img {
+  width: 100%;
+}
+
+.SLIDER_WRAPPER_CEREMONY {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.SLIDER_THUMBNAIL_WRAPPER_CEREMONY {
+  width: 980px;
+  margin: 0 auto 80px;
+}
+
+.SLIDER_THUMBNAIL_WRAPPER_CEREMONY ul li img {
+  width: 100%;
+}
+
+.slider_ceremony {
+  width: 980px;
+  display: flex;
+  justify-content: center;
+}
+.slider_ceremony .slider_ceremony-item {
+  max-width: 100%;
+}
+.slider_ceremony .slider_ceremony-item img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 980px) {
+  .SLIDER_WRAPPER_BRIDAL {
+    padding: 0 30px;
+  }
+  .slider_bridal {
+    width: 100%;
+  }
+  .SLIDER_THUMBNAIL_WRAPPER_BRIDAL {
+    width: 100%;
+  }
+  .SLIDER_WRAPPER_CEREMONY {
+    padding: 0 30px;
+  }
+  .slider_ceremony {
+    width: 100%;
+  }
+  .SLIDER_THUMBNAIL_WRAPPER_CEREMONY {
+    width: 100%;
+  }
+}
 /* -------------------------------- 
 
 FOOTER
